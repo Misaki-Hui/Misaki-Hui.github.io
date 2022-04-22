@@ -129,6 +129,13 @@ function ifActed() {
     }
 }
 
+function showHitokoto(){
+	/* 增加 hitokoto.cn API */
+    $.getJSON('https://v1.hitokoto.cn',function(result){
+        showMessage(result.hitokoto, 5000);
+    });
+}
+
 function elseActed() {
     getActed = hitokotoInterval = false;
     window.clearInterval(hitokotoTimer);
