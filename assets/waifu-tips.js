@@ -132,7 +132,6 @@ function ifActed() {
 function showHitokoto(){
 	/* 增加 hitokoto.cn API */
     $.getJSON('https://v1.hitokoto.cn',function(result){
-        text = text.render({source: result.from, creator: result.creator});
         showMessage(result.hitokoto, 5000);
         window.setTimeout(function() {showMessage(text, 3000);}, 5000);
     });
