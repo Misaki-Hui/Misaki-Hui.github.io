@@ -333,11 +333,33 @@ span {
     width:320px;
     /* height: 200px; */
     height: fit-content;
-    transform: scale(1.0);     /* 原本图片大小不变 */ 
+    transform: scale(1.0,1.0);     /* 原本图片大小不变 */ 
     transition: all 0.5s;       /* 播放动画，0.5m完成 */
 }
 
 .paperimg:hover{
-    transform: scale(1.3);         /* 改变图片的大小,鼠标经过时放大1.2倍 */
+    transform: scale(1.3,1.3);         /* 改变图片的大小,鼠标经过时放大1.2倍 */
     cursor: pointer;            /* 鼠标经过图片时变为一只手 */
 }
+/*滑动条*/
+::-webkit-scrollbar {       /*修改滑动条的宽度*/
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {     /*外层轨道。可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果*/
+    display: none;
+/*     background-color:#fff;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius:2em;
+    border:1px solid #ccc; */
+}
+::-webkit-scrollbar-thumb {         /*滚动条设置*/
+    background-color: rgb(64, 188, 179);
+    background-image: -webkit-linear-gradient(45deg,  rgba(255, 255, 255, .4) 25%,  transparent 25%,  transparent 50%,  rgba(255, 255, 255, .4) 50%,  rgba(255, 255, 255, .4) 75%,  transparent 75%,  transparent);
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius:2em;
+}
+/*滑动条*/
+
