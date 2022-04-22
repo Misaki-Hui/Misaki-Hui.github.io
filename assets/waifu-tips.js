@@ -134,24 +134,6 @@ function elseActed() {
     window.clearInterval(hitokotoTimer);
 }
 
-function showHitokoto(){
-	/* 增加 hitokoto.cn API */
-    $.getJSON('https://v1.hitokoto.cn',function(result){
-        var text = '这句一言来自 <span style="color:#0099cc;">『{source}』</span>，是 <span style="color:#0099cc;">{creator}</span> 在 hitokoto.cn 投稿的。';
-        text = text.render({source: result.from, creator: result.creator});
-        showMessage(result.hitokoto, 5000);
-        window.setTimeout(function() {showMessage(text, 3000);}, 5000);
-    });
-	/*
-	$.getJSON('https://api.fghrsh.net/hitokoto/rand/?encode=jsc&uid=3335',function(result){
-        var text = '这句一言出处是 <span style="color:#0099cc;">『{source}』</span>，是 <span style="color:#0099cc;">FGHRSH</span> 在 {date} 收藏的！';
-        text = text.render({source: result.source, date: result.date});
-        showMessage(result.hitokoto, 5000);
-        window.setTimeout(function() {showMessage(text, 3000);}, 5000);
-    });
-	*/
-}
-
 function showMessage(text, timeout, flag){
     if(flag || sessionStorage.getItem('waifu-text') === '' || sessionStorage.getItem('waifu-text') === null){
         if(Array.isArray(text)) text = text[Math.floor(Math.random() * text.length + 1)-1];
