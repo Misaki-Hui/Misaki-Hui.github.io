@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浅草 | 个人信息页</title>
+    <link rel="icon" href="../../image/86466834_p0.ico" type="image/x-icon"/>       <!--设置网页标题图片-->
+
+    <script src="../../assets/jquery.min.js"></script>
+
+    <style type="text/css">
+        @import "../../CSS/style.css";
+    </style>
+    <link rel="stylesheet" type="text/css" href="../../assets/waifu.css"/>
+
+</head>
+<body style="background-color:rgb(255, 255, 255);">
+    <!--Live 2D -->
+
+    <div class="waifu">
+        <div class="waifu-tips"></div>
+        <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+        <div class="waifu-tool">
+            <span class="fui-home"></span>
+            <span class="fui-chat"></span>
+            <span class="fui-eye"></span>
+            <span class="fui-user"></span>
+            <span class="fui-photo"></span>
+            <span class="fui-info-circle"></span>
+            <span class="fui-cross"></span>
+        </div>
+    </div>
+        
+    <script src="../../assets/waifu-tips.js"></script>
+    <script src="../../assets/live2d.js"></script>
+    <script type="text/javascript">
+        /* 可直接修改部分参数 */
+        /* 在 initModel 前添加 */
+        initModel("../../assets/")
+    </script>
+    <!--Live 2D-->
+    
+    <div class="home">
+        <div class="content">
+            <div class="stars"></div>
+            <img src="../../image/beijing1.jpg" width="100%" height="749px" alt="" draggable="false">
+            <div class="topDiv">
+                <div class="toptitle">
+                    <a href="../../index.html" draggable="false"><span class="toptitleSpan">浅草个人空间</span></a>
+                </div>
+                <div class="daohanglan">
+                    <a href="../../index.html" draggable="false"><span class="daohanglanSpan">主页</span></a>
+                    <a href="../Article.html" draggable="false"><span class="daohanglanSpan">文章</span></a>
+                    <a href="../wallpaper.html" draggable="false"><span class="daohanglanSpan">壁纸</span></a>
+                </div>
+            </div>
+        
+
+            <div class="leftDiv">   <!-- 左边栏 -->
+                <div class="leftDiv_touxiang">
+                    <img class="leftDiv_touxiangImage" src="../../image/touxiang.jpg" alt="" draggable="false">
+                </div>
+                <h2 style="text-align: center;color:rgb(85,26,139);">相遇便是缘分</h2>
+                <div class="leftDivdaohanglan">
+                    <span>粉丝数：88</span>
+                    <span>文章数：2</span>
+                    <span>收藏数：56</span>
+                    <span style="color: rgb(86, 207, 167);">如果你希望比别人走得更远，就应该起步得更早，并且在路途当中比别人更坚定！</span>
+                </div>
+            </div>              <!-- 左边栏 -->
+
+            <div class="rightDiv">  <!-- 右边栏 -->
+                <div class="rightDivTitle">
+                    <h1>Unity学习笔记分享01</h1>
+                    <hr width=800px color=#987cb9 size=3px />
+                </div>
+                <div class="rightDivContent">
+                    <h2>1.静态物体</h2><br/>
+                    <span class="rightDivContentSpan">
+                        如果引擎知道一些物体在游戏中是否会移动，那么就可以针对性的应用一系列优化策略。如果一个物体是静止的，即不会移动的，那么引擎就可以假定他不会受到任何其他物体或者事件的影响，从而提前预先计算好物体的信息。<br/>
+                    </span>
+                    <span class="rightDivContentSpan">
+                        比如说，渲染器可以将场景中许多静态物体会并为一个整体，这样就可以通过一次渲染就将他们全部处理完毕，这种做法也称之为“批量渲染”。<br>
+                    </span>
+                    <span class="rightDivContentSpan">
+                        在检视窗口中，每个游戏物体的名字右侧都有一个静态（Static）复选框以及一个菜单，用来指定物体是否为静态的，且可以进一步指定物体在某些子系统中是否为静态的，还可以独立地设置游戏物体在每个子系统中是否为静态，这样就可以对物体进行更加细致的优化。<br>
+                    </span>
+                    <div class="rightDivContentImage" >
+                        <img src="../../image/p1.jpg" alt="将物体设置为静态" draggable="false" title="将物体设置为静态">
+                    </div>
+                    <h2>2.数据类型</h2><br/><br/>
+                    <h3 style="text-indent: 2em;">2.1数据类型的分类</h3>
+                    <span class="rightDivContentSpan">
+                        在C#中两种主要的数据类型为值类型和引用类型。<br>
+                    </span>
+                    <div class="rightDivContentImage" >
+                        <img width="80%" src="../../image/p2.jpg" alt="" draggable="false" title="">
+                    </div>
+                    <h3 style="text-indent: 2em;">2.2值类型和引用类型的区别</h3>
+                    <span class="rightDivContentSpan">
+                        简而言之，值类型变量其实包含某个值。所有引用类型变量都包含值存储位置的存储地址。<br>
+                    </span>
+                    <span class="rightDivContentSpan">
+                        因此，如果值类型改变，则只会影响特定的变量，但如果引用类型改变，所有包含特定存储地址的变量都会跟着改变。<br><br>
+                    </span>
+                    <h3 style="text-indent: 2em;">1.值类型的分析</h3>
+                    <div class="rightDivContentImage" >
+                        <img width="80%" src="../../image/p3.jpg" alt="" draggable="false" title="">
+                    </div>
+                    <span class="rightDivContentSpan">
+                        在这个案例中，由于Transform是一个类，所以是引用类型，当实例化对象tran的值改变的时候，原transform也会跟着改变。因为引用类型的变量存储了变量值的地址，是对地址的引用，当值被修改时，所有对这个值的引用都会跟着改变。<br><br>
+                    </span>
+                    <h3 style="text-indent: 2em;">2.引用类型的分析</h3>
+                    <div class="rightDivContentImage" >
+                        <img width="80%" src="../../image/p4.jpg" alt="" draggable="false" title="">
+                    </div>
+                    <span class="rightDivContentSpan">
+                        在这个案例中，由于Transform是一个类，所以是引用类型，当实例化对象tran的值改变的时候，原transform也会跟着改变。因为引用类型的变量存储了变量值的地址，是对地址的引用，当值被修改时，所有对这个值的引用都会跟着改变。<br>
+                    </span>
+                    <h3 style="text-align: center; margin-bottom: 30px; margin-top: 40px;">---------------------------------没有更多了哦---------------------------------</h3>
+
+
+                </div>
+            </div>      <!-- 右边栏 -->
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浅草 | 个人信息页</title>
+    <link rel="icon" href="../../image/86466834_p0.ico" type="image/x-icon"/>       <!--设置网页标题图片-->
+
+    <script src="../../assets/jquery.min.js"></script>
+
+    <style type="text/css">
+        @import "../../CSS/style.css";
+    </style>
+    <link rel="stylesheet" type="text/css" href="../../assets/waifu.css"/>
+
+</head>
+<body style="background-color:rgb(255, 255, 255);">
+    <!--Live 2D -->
+
+    <div class="waifu">
+        <div class="waifu-tips"></div>
+        <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+        <div class="waifu-tool">
+            <span class="fui-home"></span>
+            <span class="fui-chat"></span>
+            <span class="fui-eye"></span>
+            <span class="fui-user"></span>
+            <span class="fui-photo"></span>
+            <span class="fui-info-circle"></span>
+            <span class="fui-cross"></span>
+        </div>
+    </div>
+        
+    <script src="../../assets/waifu-tips.js"></script>
+    <script src="../../assets/live2d.js"></script>
+    <script type="text/javascript">
+        /* 可直接修改部分参数 */
+        /* 在 initModel 前添加 */
+        initModel("../../assets/")
+    </script>
+    <!--Live 2D-->
+    
+    <div class="home">
+        <div class="content">
+            <div class="stars"></div>
+            <img src="../../image/beijing1.jpg" width="100%" height="749px" alt="" draggable="false">
+            <div class="topDiv">
+                <div class="toptitle">
+                    <a href="../../index.html" draggable="false"><span class="toptitleSpan">浅草个人空间</span></a>
+                </div>
+                <div class="daohanglan">
+                    <a href="../../index.html" draggable="false"><span class="daohanglanSpan">主页</span></a>
+                    <a href="../Article.html" draggable="false"><span class="daohanglanSpan">文章</span></a>
+                    <a href="../wallpaper.html" draggable="false"><span class="daohanglanSpan">壁纸</span></a>
+                </div>
+            </div>
+        
+
+            <div class="leftDiv">   <!-- 左边栏 -->
+                <div class="leftDiv_touxiang">
+                    <img class="leftDiv_touxiangImage" src="../../image/touxiang.jpg" alt="" draggable="false">
+                </div>
+                <h2 style="text-align: center;color:rgb(85,26,139);">相遇便是缘分</h2>
+                <div class="leftDivdaohanglan">
+                    <span>粉丝数：88</span>
+                    <span>文章数：2</span>
+                    <span>收藏数：56</span>
+                    <span style="color: rgb(86, 207, 167);">各行各业都需要人才，看你能否在投入的时间和精力上超越同行业的其他人了</span>
+                </div>
+            </div>              <!-- 左边栏 -->
+
+            <div class="rightDiv">  <!-- 右边栏 -->
+                <div class="rightDivTitle">
+                    <h1>Unity学习笔记分享02</h1>
+                    <hr width=800px color=#987cb9 size=3px />
+                </div>
+                <div class="rightDivContent">
+                    <h2>1.静态变量</h2><br/>
+                    <span class="rightDivContentSpan">
+                        静态变量如变量和方法，是跨类的所有实例共享的成员。此外，静态成员可以直接通过类访问，无需先对类的对象进行实例化。<br/>
+                    </span>
+                    <span class="rightDivContentSpan">
+                        通常成员变量对于类的每个对象是唯一的，虽然类的每个对象具有相同的变量，但他们有各自的值。<br>
+                    </span>
+                    <span class="rightDivContentSpan">
+                        然而，对于静态变量，类的每个对象具有相同的变量和相同的值，因此，如果在一处更改某个静态变量的值，则其他所有静态变量的值也将更改。<br>
+                    </span>
+                    <span class="rightDivContentSpan">
+                        假设你想知道在Enemy类中	实例化了多少个对象，一个简单的方法就是使用一个静态成员变量enemyCount，当将关键字static输入到成员声明中，即表明这是静态的，因此，他属于类本身，而不属于类的任何实例。然后，每次创建enemy对象的时候，都需要让这个变量递增由于每个对象都让同一个变量递增，因此他将包含所创建的所有敌人的总数。<br>
+                    </span>
+                    <div class="rightDivContentImage" >
+                        <img src="../../image/p5.jpg" alt="将物体设置为静态" draggable="false" title="将物体设置为静态">
+                    </div>
+                    <div class="rightDivContentImage" >
+                        <img src="../../image/p6.jpg" alt="将物体设置为静态" draggable="false" title="将物体设置为静态">
+                    </div>
+                    <span class="rightDivContentSpan">
+                        因此，他将包含已创建的所有敌人的总和。访问该成员变量也非常简单，在这个Game类中，我们创建了多个enemy实例，我们只需要使用类的名称和点运算符来访问enemyCount静态变量，在本例中enemyCount等于3.<br>
+                    </span>
+                    <span class="rightDivContentSpan">
+                        与静态变量一样，静态方法也属于类，而不属于类的特定对象。<br>
+                    </span>
+                    <div class="rightDivContentImage" >
+                        <img width="80%" src="../../image/p7.png" alt="" draggable="false" title="">
+                    </div>
+                    <div class="rightDivContentImage" >
+                        <img src="../../image/p8.jpg" alt="将物体设置为静态" draggable="false" title="将物体设置为静态">
+                    </div>
+                    <span class="rightDivContentSpan">
+                        在这个类中，我们只需要使用类名点方法名即可调用add方法，无需通过实例化类的对象来使用其静态成员。<br>
+                    </span>
+                    <span class="rightDivContentSpan">
+                        其实，Input.GetKey或者Input.GetButton都是静态变量。因为使用他们不需要通过实例化Input类的对象来使用他们。<br>
+                    </span>
+                    <span class="rightDivContentSpan">
+                        注意事项：不能在静态方法内部使用非静态成员变量，记住静态方法属于类。而非静态变量属于类的实例。<br>
+                    </span>
+                    <span class="rightDivContentSpan">
+                        你也可以使整个类成为静态，结果是类成为静态的，并且不能创建类的实例，如果想要使类完全由静态成员变量和方法组成，如Input类，则这样非常有用。<br>
+                    </span><br>
+
+                    <h2>2.方法重载</h2><br/><br>
+                    <h3 style="text-indent: 2em;">2.1什么是重载</h3>
+                    <span class="rightDivContentSpan">
+                        通过重载过程，可以为单个方法提供多个定义，这意味着可以以同一个方法名称。<br>
+                    </span>
+                    <span class="rightDivContentSpan">
+                        如下图，将AddNumbers和AddStrings联合，写为一个Add重载,使Add这个方法既可以处理数字又可以处理字符串。<br>
+                    </span>
+                    <div class="rightDivContentImage" >
+                        <img width="60%" src="../../image/p9.jpg" alt="" draggable="false" title="">
+                    </div><br>
+                    <h3 style="text-indent: 2em;">2.2重载的例子</h3>
+                    <div class="rightDivContentImage" >
+                        <img width="80%" src="../../image/p10.png" alt="" draggable="false" title="">
+                    </div>
+                    <span class="rightDivContentSpan">
+                        代码如上所示,两个方法的名称相同，参数列表的参数个数相同，但参数列表的数据类型不同，因此构成了重载。<br><br>
+                    </span>
+                    <h3 style="text-indent: 2em;">2.3注意事项</h3>
+                    <span class="rightDivContentSpan">
+                        **当系统尝试确定要运行的正确的已重载的方法版本时，可能会出现三种情况：<br>
+                    </span>
+                    <span class="rightDivContentSpan">
+                        第一种：与传入的参数完全匹配，运行这个版本的已重载方法。<br>
+                    </span>
+                    <span class="rightDivContentSpan">
+                        第二种：如果不是完全匹配，系统将查看所有可能的匹配项，并选择一个需要最少转换量的版本。<br>
+                    </span>
+                    <span class="rightDivContentSpan">
+                        第三种：如果没有可能的匹配项，或者多个版本需要的转化量相同，则会抛出错误。<br>
+                    </span>
+
+
+                    <h3 style="text-align: center; margin-bottom: 30px; margin-top: 40px;">---------------------------------没有更多了哦---------------------------------</h3>
+
+
+                </div>
+            </div>      <!-- 右边栏 -->
+        </div>
+    </div>
+</body>
+
+</html>
